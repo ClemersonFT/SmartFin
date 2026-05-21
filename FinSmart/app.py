@@ -4,9 +4,7 @@ from dotenv import load_dotenv
 from openai import OpenAI
 from langchain_text_splitters import CharacterTextSplitter
 from langchain_community.vectorstores import Chroma
-from langchain_community.embeddings import HuggingFaceEmbeddings
-
-# Configuração pro groq trabaia
+from langchain_community.embeddings import 
 
 load_dotenv()
 client = OpenAI(
@@ -17,7 +15,6 @@ embedding = HuggingFaceEmbeddings(
     model_name="sentence-transformers/all-MiniLM-L6-v2"
 )
 
-# Ó, as funções de transcreve ta aqui
 
 def transcrever(audio_path):
     with open(audio_path, "rb") as audio_file:
@@ -91,7 +88,6 @@ def perguntar_rag(pergunta):
     return resposta.choices[0].message.content
 
 
-#Daqui pra baixo é pra edita o frontzin q não ta la muito trabalhado na beleza
 
 st.title("FinSmart")
 st.subheader("IA para documentação de reuniões")
@@ -121,8 +117,6 @@ if audio:
         salvar_rag(texto)
         st.success("Reunião salva no RAG!")
 
-
-#Ó ana aqui edita o chat
 
 st.divider()
 st.subheader("Consultar reuniões")
