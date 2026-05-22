@@ -5,3 +5,5 @@ pip install sentence-transformers
 pip install langchain
 pip install python-dotenv
 pip install langchain-community
+
+crie um arquivo chamado .env com o conteudo GROQ_API_KEY="sua key do groq"
