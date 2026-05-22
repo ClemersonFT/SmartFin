@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from openai import OpenAI
 from langchain_text_splitters import CharacterTextSplitter
 from langchain_community.vectorstores import Chroma
-from langchain_community.embeddings import 
+from langchain_community.embeddings import HuggingFaceEmbeddings
 
 load_dotenv()
 client = OpenAI(
